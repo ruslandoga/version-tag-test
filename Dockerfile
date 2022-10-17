@@ -3,4 +3,5 @@ FROM alpine:latest
 ARG BUILD_METADATA
 ENV BUILD_METADATA=${BUILD_METADATA}
 
+RUN apk add jq
 RUN echo $BUILD_METADATA > meta.json
